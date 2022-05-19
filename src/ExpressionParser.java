@@ -48,7 +48,12 @@ public class ExpressionParser {
     }
 
     protected Expression newNumber(String number){
-        return null;
+        try{
+            return new IntegerLiteral(Integer.parseInt(number));
+        }
+        catch(NumberFormatException e){
+            return new DoubleLiteral(Double.parseDouble(number));
+        }
     }
 
     private boolean isNumeric(String strToCheck){
