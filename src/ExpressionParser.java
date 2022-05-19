@@ -1,14 +1,14 @@
 public class ExpressionParser {
-    protected int location;
-    protected int direction;
-    protected int startingPointFlag;
+    private int location;
+    private final int direction;
+    private final int startingPointFlag;
 
     public ExpressionParser(int direction, int startingPointFlag){
         this.direction = direction;
         this.startingPointFlag = startingPointFlag;
         this.location = 0;
     }
-    protected Expression parse(String stringToParse){
+    public Expression parse(String stringToParse){
         String[] parts = stringToParse.split(" ");
         if(startingPointFlag == 0)
             location = 0;
@@ -48,7 +48,12 @@ public class ExpressionParser {
     }
 
     protected Expression newNumber(String number){
-        return null;
+        try{
+            return new IntegerLiteral(Integer.parseInt(number));
+        }
+        catch(NumberFormatException e){
+            return new DoubleLiteral(Double.parseDouble(number));
+        }
     }
 
     private boolean isNumeric(String strToCheck){
