@@ -1,3 +1,6 @@
+/**
+ * An expression that calculates the opposite of another expression
+ */
 public class UnaryMinus extends Expression{
 
     private final Expression expression;

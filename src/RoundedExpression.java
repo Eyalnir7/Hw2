@@ -1,10 +1,13 @@
+/**
+ * An expression that rounds the value of another expression
+ */
 public class RoundedExpression extends Expression{
     private final Expression expression;
     private final int precision;
 
-    public RoundedExpression(Expression expression, int percision){
+    public RoundedExpression(Expression expression, int precision){
         this.expression = expression;
-        this.precision = percision;
+        this.precision = precision;
     }
 
 
