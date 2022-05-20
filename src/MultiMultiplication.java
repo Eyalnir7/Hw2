@@ -11,12 +11,12 @@ public class MultiMultiplication extends MultiOperation{
         for(int i = 0; i<expressions.length-1; i++){
             result.append(expressions[i].toString()).append(" * ");
         }
-        return result.toString() + expressions[expressions.length-1].toString()+")";
+        return result + expressions[expressions.length-1].toString()+")";
     }
 
     @Override
     public double evaluate() {
-        double result = 0;
+        double result = 1;
         for (Expression expression : expressions) {
             result *= expression.evaluate();
         }

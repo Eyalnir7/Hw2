@@ -33,12 +33,16 @@ public class ExpressionParser {
     private Expression createExpression(String operator, Expression expression1, Expression expression2){
         switch(operator){
             case "+":
+                if(startingPointFlag == 1)
+                    return new Addition(expression2, expression1);
                 return new Addition(expression1, expression2);
             case "-":
                 return new Subtraction(expression1, expression2);
             case "/":
                 return new Division(expression1, expression2);
             case "*":
+                if(startingPointFlag == 1)
+                    return new Multiplication(expression2, expression1);
                 return new Multiplication(expression1, expression2);
             case "-u":
                 return new UnaryMinus(expression1);
