@@ -10,7 +10,7 @@ public class RoundedExpression extends Expression{
 
     @Override
     public String toString() {
-        return Double.toString(this.evaluate());
+        return expression.toString();
     }
 
     @Override

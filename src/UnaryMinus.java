@@ -1,6 +1,6 @@
 public class UnaryMinus extends Expression{
 
-    private Expression expression;
+    private final Expression expression;
 
     public UnaryMinus(Expression expression){
         this.expression = expression;
@@ -8,7 +8,7 @@ public class UnaryMinus extends Expression{
 
     @Override
     public String toString() {
-        return "-("+expression.toString()+")";
+        return "(-"+expression.toString()+")";
     }
 
     @Override

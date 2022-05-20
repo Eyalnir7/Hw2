@@ -7,7 +7,7 @@ public class Division extends BinaryOperation{
 
     @Override
     public String toString() {
-        return expression1.toString()+ " / " +expression2.toString();
+        return "("+expression1.toString()+ " / " +expression2.toString()+")";
     }
 
     @Override
