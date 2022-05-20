@@ -1,3 +1,6 @@
+/**
+ * An expression that represents a double
+ */
 public class DoubleLiteral extends Expression{
     private final double d;
 

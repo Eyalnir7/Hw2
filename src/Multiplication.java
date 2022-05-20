@@ -1,3 +1,6 @@
+/**
+ * An expression that represents multiplying several expressions(at least 2)
+ */
 public class Multiplication extends BinaryOperation{
 
     public Multiplication(Expression expression1, Expression expression2){

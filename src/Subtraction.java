@@ -1,3 +1,6 @@
+/**
+ * An expression that represents the subtraction of two other expressions
+ */
 public class Subtraction extends BinaryOperation{
 
     public Subtraction(Expression expression1, Expression expression2){

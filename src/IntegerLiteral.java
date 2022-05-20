@@ -1,3 +1,6 @@
+/**
+ * An expression that represents an integer
+ */
 public class IntegerLiteral extends Expression{
     private final int integer;
 
